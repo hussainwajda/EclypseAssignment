@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react"
-import { ChevronLeft, Quote } from "lucide-react"
+import { ChevronLeft} from "lucide-react"
 import cus1 from "../../assets/cus1.jpg"
 import cus2 from "../../assets/cus2.jpg"
 import cus3 from "../../assets/cus3.jpg"
@@ -75,7 +75,7 @@ export default function TestimonialCarousel() {
           <h2 className="text-white text-sm font-roboto tracking-widest uppercase">Our Customers</h2>
         </div>
 
-        <div className="relative flex flex-col md:flex-row items-start justify-between">
+        <div className="relative flex flex-col flex-row items-start justify-between">
           {/* Testimonial Content */}
           <div className="w-full md:w-3/4 relative h-[300px]">
             {testimonials.map((testimonial, index) => (
@@ -87,7 +87,7 @@ export default function TestimonialCarousel() {
               >
                 <div className="flex items-start mb-8">
                   {/* <span className="text-white text-8xl font-[Coolvetica]">“</span> */}
-                  <h3 className="text-white text-6xl font-light ml-2"><sup className="text-8xl font-[Coolvetica] align-top">“</sup>{testimonial.quote}</h3>
+                  <h3 className="text-white text-lg md:text-6xl font-light md:ml-2"><sup className="text-4xl md:text-8xl font-[Coolvetica] align-top">“</sup>{testimonial.quote}</h3>
                 </div>
 
                 <div className="mt-8">
@@ -99,7 +99,7 @@ export default function TestimonialCarousel() {
           </div>
 
           {/* Profile Images */}
-          <div className="flex flex-row md:flex-col items-center space-x-3 md:space-x-0 md:space-y-5 mt-8 md:mt-0">
+          <div className="flex flex-col items-center space-x-3 md:space-x-0 md:space-y-5 mt-8 md:mt-0">
             {testimonials.map((testimonial, index) => (
               <button
                 key={testimonial.id}

@@ -2,15 +2,26 @@ import React from "react";
 import HeroSection from "../components/home/HeroSection";
 import MediaGallery from "../components/home/mediaGallery";
 import ProductPage from "../components/home/ProductPages";
+import ProductPageSkeleton from "../components/skeleton/productPage";
 import Accordion from "../components/home/Accordian";
 import TestimonialCarousel from "../components/home/OurCustomer";
 import Footer from "../components/layout/footer";
 import Preloader from "../components/layout/Preloader";
 
 export default function Home() {
+    const [loading, setLoading] = React.useState(true);
+
+    React.useEffect(() => {
+        const handleLoad = () => setLoading(false);
+        window.addEventListener("load", handleLoad);
+        return () => window.removeEventListener("load", handleLoad);
+    }, []);
+    
     return (
         <main className="bg-black mt-[125px] min-h-screen text-[var(--color-secondary)]">
-        <Preloader />
+        <Preloader onLoadingComplete={function (): void {
+                throw new Error("Function not implemented.");
+            } } />
         <HeroSection />
         <div className="bg-black text-white px-4 md:py-40">
             <div className="max-w-4xl md:ml-15 mr-auto">
@@ -47,7 +58,7 @@ export default function Home() {
                 </h2>
             </div>
         </div>
-        <ProductPage />
+        {loading ? <ProductPageSkeleton /> : <ProductPage />}
         <Accordion />
         <TestimonialCarousel />
         <Footer />

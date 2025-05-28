@@ -82,7 +82,7 @@ export default function ProductPage() {
     <div className="min-h-screen bg-white rounded-md">
       <div className="mx-auto m-2">
         {/* Product Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="relative h-[300px] md:h-full md:aspect-[3/4] bg-gray-100 rounded-md overflow-hidden">
             {mainMedia.type === "video" ? (
               <div
@@ -177,7 +177,7 @@ export default function ProductPage() {
               <Link
                 to="/checkout"
                 className={`py-3 px-6 bg-black text-white rounded-md font-medium text-center ${
-                  !selectedSize ? "opacity-50 cursor-not-allowed pointer-events-none" : "hover:bg-gray-800"
+                  !selectedSize ? "opacity-50 cursor-not-allowed pointer-events-none" : "hover:bg-[var(--color-btn-red)] transition-colors"
                 }`}
               >
                 Buy
