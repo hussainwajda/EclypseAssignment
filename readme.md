@@ -13,8 +13,6 @@ npm run dev or vite --host (for non-production)
 
 ## Overview
 
-This project is a modern e-commerce website built with Next.js 15, featuring a sophisticated design system with smooth animations, responsive layouts, and interactive components. The application includes a complete shopping experience from product browsing to checkout.
-
 ## Tech Stack
 
 ### Core Framework
@@ -152,7 +150,7 @@ import MediaGallery from './media-gallery'
 **Dependencies**:
 
 - `useState` from React
-- `Link` from Next.js
+- `Link` from react-router-dom
 - `ChevronRight` from Lucide React
 
 
@@ -276,7 +274,7 @@ interface Testimonial {
 
 **Dependencies**:
 
-- `Link` from Next.js
+- `Link` from React-router-dom
 - `ArrowUp` from Lucide React
 
 
@@ -357,7 +355,7 @@ transition={{ duration: 1, ease: "easeInOut" }}
 - `useState` from React
 - `motion`, `AnimatePresence` from Framer Motion
 - Multiple Lucide React icons
-- `Link` from Next.js
+- `Link` from react-router-dom
 
 
 **State Management**:
@@ -433,7 +431,7 @@ transition={{ duration: 0.5 }}
 
 ### Image Optimization
 
-- Next.js Image component for automatic optimization
+- React-router-dom Image component for automatic optimization
 - Placeholder images with proper dimensions
 - Lazy loading for off-screen content
 
@@ -476,16 +474,6 @@ transition={{ duration: 0.5 }}
 - Color-blind friendly design
 
 
-## Browser Support
-
-**Supported Browsers**:
-
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-
 **Progressive Enhancement**:
 
 - Graceful degradation for older browsers
@@ -521,7 +509,6 @@ transition={{ duration: 0.5 }}
 
 ### Environment Variables
 
-- `NEXT_PUBLIC_` prefix for client-side variables
 - Secure API keys on server-side only
 - Environment-specific configurations
 
@@ -532,35 +519,6 @@ transition={{ duration: 0.5 }}
 - Image optimization enabled
 - Bundle analysis for size monitoring
 
-
-### SEO Optimization
-
-- Meta tags and Open Graph
-- Structured data markup
-- Sitemap generation
-- Robot.txt configuration
-
-
-## Future Enhancements
-
-### Potential Improvements
-
-1. **State Management**: Consider Zustand or Redux Toolkit for complex state
-2. **Testing**: Add Jest and React Testing Library
-3. **Internationalization**: Add next-i18next for multi-language support
-4. **Analytics**: Integrate Google Analytics or similar
-5. **Performance**: Add service worker for caching
-6. **Database**: Integrate with headless CMS or database
-7. **Authentication**: Add user authentication system
-8. **Payment**: Integrate real payment gateways
-
-
-### Monitoring
-
-- Error tracking with Sentry
-- Performance monitoring
-- User analytics
-- A/B testing capabilities
 
 
 ---
