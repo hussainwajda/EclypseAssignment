@@ -1,5 +1,4 @@
 import { motion } from "framer-motion"
-import video from "../../assets/video_card.mp4"
 import image1 from "../../assets/card2.jpg"
 import image2 from "../../assets/card3.jpg"
 import image3 from "../../assets/card4.jpg"
@@ -19,7 +18,7 @@ const mediaItems: MediaItem[] = [
   {
     id: "1",
     type: "video",
-    src: `${video}`,
+    src: ``,
     alt: "Woman in red coat walking on street",
   },
   {
@@ -53,6 +52,7 @@ const mediaItems: MediaItem[] = [
 ];
 
 export default function MediaGallery() {
+  const video = "https://eclypse-media-buck.s3.ap-south-1.amazonaws.com/assets/video_card.mp4";
   const videoItem = mediaItems[0]
   const imageItems = mediaItems.slice(1)
 

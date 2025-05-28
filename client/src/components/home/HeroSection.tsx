@@ -1,7 +1,7 @@
 import React from "react";
-import heroVideo from "../../assets/hero_bg.mp4"
 
 export default function HeroSection() {
+  const heroVideo = "https://eclypse-media-buck.s3.ap-south-1.amazonaws.com/assets/hero_bg.mp4";
   return (
     <section className="md:min-h-screen md:mx-8 bg-black text-white flex flex-col md:p-6 mb-12 font-helvetica">
       {/* Top row */}

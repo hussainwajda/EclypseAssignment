@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import video from "../../assets/product_video.mp4"
 import image1 from "../../assets/product_img1.jpg"
 import image2 from "../../assets/prod_img2.jpg"
 import image3 from "../../assets/prod_img3.jpg"
@@ -30,7 +29,7 @@ export default function ProductPage() {
     {
       id: "video1",
       type: "video",
-      src: `${video}`,
+      src: ``,
       poster: "/placeholder.svg?height=600&width=450",
       alt: "Product video",
     },
@@ -57,6 +56,7 @@ export default function ProductPage() {
   // State management
   const [mainMedia, setMainMedia] = useState<ProductImage>(productMedia[0])
   const [selectedSize, setSelectedSize] = useState<Size | null>(null)
+  const video = "https://eclypse-media-buck.s3.ap-south-1.amazonaws.com/assets/product_video.mp4"
 
   const handleThumbnailClick = (media: ProductImage) => {
     setMainMedia(media)
@@ -89,7 +89,7 @@ export default function ProductPage() {
                 className="w-full h-full cursor-pointer"
               >
                 <video className="w-full h-full object-cover" poster={mainMedia.poster} muted autoPlay playsInline loop>
-                  <source src={mainMedia.src} type="video/mp4" />
+                  <source src={video} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
